@@ -1,0 +1,38 @@
+﻿<Window x:Class="EmeraldSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmeraldSharp"
+        mc:Ignorable="d"
+        Title="MainWindow"  SizeToContent="WidthAndHeight"
+        MinWidth="400" MinHeight="300">
+    <DockPanel LastChildFill="True"  >
+        
+        <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button x:Name ="DrawButton" DockPanel.Dock="Top" Content="Draw" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name ="SelectButton" DockPanel.Dock="Top" Content="Select" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name ="LightButton"  DockPanel.Dock="Top" Content="HighLight" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name ="Pen"  DockPanel.Dock="Top" Content="Pen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name ="Interprete"  DockPanel.Dock="Top" Content="Interprete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" DockPanel.Dock="Right" x:Name="PropertiesPanel" Orientation="Vertical">
+
+        </StackPanel>
+
+
+
+        <ScrollViewer x:Name="ScrollView" Grid.Column="0" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Background="LightGray" Margin="2,2,2,2">
+            <InkCanvas x:Name="canvas"  Margin="2,2,2,2" Height="300"   Width="400" Background="White" MouseWheel="canvas_MouseWheel">
+               
+            </InkCanvas>
+            </ScrollViewer>
+          
+           
+        
+
+
+    </DockPanel>
+
+</Window>
